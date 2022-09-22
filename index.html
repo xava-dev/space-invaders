@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Space Invaders</title>
+    <style>
+        body {
+            background: black;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .logo {
+            margin: 30px 0 10px;
+        }
+
+        .canvas-container {
+            padding: 20px;
+            border-radius: 20px;
+            animation: border 8s infinite;
+            -webkit-transition: all 1000ms linear;
+            -ms-transition: all 1000ms linear;
+            transition: all 1000ms linear;
+        }
+
+        @keyframes border {
+            0%  {border-color: green; box-shadow: 0 0 30px green;}
+            20% {border-color: blue; box-shadow: 0 0 30px blue;}
+            40% {border-color: purple; box-shadow: 0 0 30px purple;}
+            60% {border-color: red; box-shadow: 0 0 30px red;}
+            80% {border-color: orange; box-shadow: 0 0 30px orange;}
+            100%{border-color: green; box-shadow: 0 0 30px green;}
+        }
+
+        p {
+            color: darkgray;
+            font-family: Helvetica, sans-serif;
+            margin-bottom: 30px;
+        }
+
+        kbd {
+            background: gray;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            margin-inline: 2px;
+        }
+
+        #play-again {
+            margin-top: -18rem;
+            display: none;
+            cursor: pointer;
+            font-size: 1.4rem;
+            background: transparent;
+            border: gray 2px solid;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 10px;
+            transition: all 500ms linear;
+        }
+
+        #play-again:hover {
+            animation: border 8s infinite;
+            -webkit-transition: all 1000ms linear;
+            -ms-transition: all 1000ms linear;
+            transition: all 1000ms linear;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="images/space-invaders-white.png" width="300" height="125" alt="space invaders">
+    <p><kbd>&leftarrow;</kbd><kbd>&rightarrow;</kbd> to move <kbd style="margin-left: 20px;">Spacebar</kbd> to shoot</p>
+    <div class="canvas-container">
+        <canvas id="game"></canvas>
+    </div>
+    <button id="play-again" onClick="window.location.reload();">Play again</button>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

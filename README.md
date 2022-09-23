@@ -3,4 +3,4 @@
 # Space Invaders
 
 Feel free to play:
-xava-dev.github.io/space-invaders/
+https://xava-dev.github.io/space-invaders/
